@@ -21,3 +21,18 @@ puts unique_chars?(abca)
 # false
 # => nil
 #
+
+# not one line but simpler
+def uniq_chars?(str)
+    if str.chars.uniq.length == str.chars.length
+        return true
+    else 
+        return false
+    end
+end
+
+
+# One line solution using ternary operator
+def uniq_chars?(str)
+    str.count(str) == 1 ? true : false
+end
